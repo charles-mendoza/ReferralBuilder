@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  color: var(--gray);
+  text-transform: uppercase;
+  gap: 4px;
+
+  label {
+    font-size: 0.8em;
+  }
+
+  input {
+    padding: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--gray);
+    outline: 1px solid var(--gray);
+  }
+
+  &.error {
+    label {
+      color: var(--red);
+    }
+
+    input {
+      border: 1px solid var(--red);
+      outline: 1px solid var(--red);
+    }
+  }
+}

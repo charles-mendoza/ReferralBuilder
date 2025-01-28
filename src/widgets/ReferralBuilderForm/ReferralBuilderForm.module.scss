@@ -1,0 +1,58 @@
+@use "../../styles/base/mixins";
+
+.main {
+  padding: 0 60px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+
+  .container {
+    width: 100%;
+
+    h1 {
+      color: #000;
+    }
+
+    .group {
+      padding-top: 20px;
+
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-row-gap: 1.6em;
+        grid-column-gap: 1.8em;
+
+        button {
+          margin: 1em 0 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include mixins.respond("desktop-sm") {
+    padding: 60px;
+  }
+
+  @include mixins.respond("tablet") {
+    padding: 40px 20px;
+
+    .container {
+      .group {
+        .fields {
+          grid-template-columns: 1fr;
+
+          button {
+            margin: 0;
+          }
+        }
+
+        &:last-child {
+          padding-top: 2em;
+        }
+      }
+    }
+  }
+}

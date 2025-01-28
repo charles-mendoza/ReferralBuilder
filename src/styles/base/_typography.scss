@@ -1,0 +1,12 @@
+@use "./mixins";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Calibri, sans-serif;
+  font-size: 1em;
+  color: var(--gray);
+  background-color: #fff;
+}

@@ -1,0 +1,68 @@
+@use "../../styles/base/mixins";
+
+.main {
+  padding: 30px;
+  background: var(--gray-10);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 80vh;
+    overflow: auto;
+    position: relative;
+    transition-duration: 0.5s;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--gray);
+      }
+
+      th,
+      td {
+        padding: 8px;
+      }
+
+      td.actions {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+
+        .actionBtn {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @include mixins.respond("tablet") {
+    padding: 20px;
+
+    .container {
+      width: 100vw;
+      max-width: calc(100vw - 60px);
+
+      table {
+        th,
+        td {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
