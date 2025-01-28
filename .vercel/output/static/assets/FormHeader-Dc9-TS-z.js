@@ -1,1 +1,0 @@
-import{j as t}from"./jsx-runtime-z8MfsBtr.js";const a="_main_octcp_1",o={main:a},r=({children:e})=>t.jsx("div",{className:o.main,children:e});r.__docgenInfo={description:"",methods:[],displayName:"FormHeader",props:{children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:""}}};export{r as F};
