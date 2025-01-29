@@ -35,7 +35,8 @@ export const ReferralPreview = ({
     if (ref.current) {
       const height = ref.current.getBoundingClientRect().height;
       const listItems = referrals?.length ?? 0;
-      const totalLines = Math.round((height - 40) / 45 - listItems);
+      const maxLines = Math.floor(height / 48);
+      const totalLines = maxLines - listItems;
       setLines(totalLines);
     }
   };
@@ -84,7 +85,11 @@ export const ReferralPreview = ({
               </tr>
             ))}
             {[...Array(lines)].map((_, index) => (
-              <tr key={`line-${index}`}>
+              <tr key={`empty-${index}`}>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
             ))}
